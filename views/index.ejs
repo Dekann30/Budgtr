@@ -5,6 +5,12 @@
     <h1>Budgtr All</h1>
     <button type="button" onclick="location.href='/budgets/new'">New Entry</button>
     <div class="container">
+        <% total = null
+        for (let i=0; i<sum.length; i++){
+            total += sum[i]}
+            // $('.account-total')[0].css("backgroundColor", "red")
+            %>
+            <div class="account-total" style="height:30px; width:40px; display: inline; font-size: medium;"> Total: $<%=total%></div>
         <table>
             <% for(oneEntry in allEntries){ %>
             <tr>
