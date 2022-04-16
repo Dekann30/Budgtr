@@ -3,6 +3,7 @@
 <%- include('partials/head.ejs') %>
 <body>
     <h1>Budgtr All</h1>
+    <button type="button" onclick="location.href='/budgets/new'">New Entry</button>
     <div class="container">
         <table>
             <% for(oneEntry in allEntries){ %>

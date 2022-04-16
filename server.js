@@ -8,7 +8,7 @@ const methodOverride = require('method-override')
 
 //Middleware
 app.use(express.urlencoded({extended:false}))
-app.use('/static', express.static('public'))
+app.use(express.static('public'))
 app.use(methodOverride('_method'))
 
 app.get('/', (req,res)=>{
@@ -26,6 +26,10 @@ app.get('/budgets/new', (req,res)=>{
 })
 
 //Create
+app.post('/budgets', (req, res)=>{
+    budget.push(req.body)
+    res.redirect('/budgets')
+})
 
 //Show
 app.get('/budgets/:id', (req,res)=>{
