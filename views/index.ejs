@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head.ejs')
+<%- include('partials/head.ejs') %>
 <body>
     <h1>Budgtr All</h1>
     <div class="container">
@@ -8,7 +8,7 @@
             <% for(oneEntry in allEntries){ %>
             <tr>
                  <td><%=allEntries[oneEntry].date%></td>
-                <td><a href="/"><%=allEntries[oneEntry].name%></a></td>
+                <td><a href="/budgets/<%=oneEntry%>"><%=allEntries[oneEntry].name%></a></td>
                 <td><%=allEntries[oneEntry].amount %></td>
             </tr>
             <% } %>

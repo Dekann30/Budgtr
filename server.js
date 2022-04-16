@@ -23,5 +23,8 @@ app.get('/budgets', (req,res)=>{
 //Create
 
 //Show
+app.get('/budgets/:id', (req,res)=>{
+    res.render('show.ejs', {entry: budget[req.params.id]})
+})
 
 app.listen(PORT, ()=>{console.log("It's ALIVE~")})
