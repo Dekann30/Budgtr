@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+<body>
+    <div class="container">
+        <h1>Create New Entry</h1>
+        <br action="/budgets" method="post">
+            <input type="text" name="date" placeholder="Date"/><br/>
+            <input type="text" name="name" placeholder="Name"/><br/>
+            <input type="number" name="amount" placeholder="Amount"/><br/>
+            <input type="text" name="from" placeholder="From"/><br/>
+            <input type="submit" value="Submit"></br>
+            <input type="text" name="tags" placeholder="Tags"/>
+        </form>
+    </div>
+</body>
+</html>

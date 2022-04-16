@@ -4,10 +4,12 @@ const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 3001
 const budget = require('./models/budget.js')
+const methodOverride = require('method-override')
 
 //Middleware
 app.use(express.urlencoded({extended:false}))
 app.use('/static', express.static('public'))
+app.use(methodOverride('_method'))
 
 app.get('/', (req,res)=>{
     res.send('<h1>My Budget App</h1>')
@@ -19,6 +21,9 @@ app.get('/budgets', (req,res)=>{
 })
 
 //New
+app.get('/budgets/new', (req,res)=>{
+    res.render('new.ejs')
+})
 
 //Create
 
