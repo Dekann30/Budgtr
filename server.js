@@ -14,6 +14,9 @@ app.get('/', (req,res)=>{
 })
 
 //Index
+app.get('/budgets', (req,res)=>{
+    res.render('index.ejs', {allEntries: budget})
+})
 
 //New
 

@@ -9,6 +9,17 @@
     <title>Budgtr</title>
 </head>
 <body>
-    
+    <h1>Budgtr All</h1>
+    <div class="container">
+        <table>
+            <% for(oneEntry in allEntries){ %>
+            <tr>
+                 <td><%=allEntries[oneEntry].date%></td>
+                <td><a href="/"><%=allEntries[oneEntry].name%></a></td>
+                <td><%=allEntries[oneEntry].amount %></td>
+            </tr>
+            <% } %>
+        </table>
+    </div>
 </body>
 </html>
